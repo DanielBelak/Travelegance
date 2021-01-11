@@ -260,8 +260,9 @@ let london = 2643743;
 let sydney = 6619279;
 let newYork = 5128581;
 let tokyo = 1850147;
+require("dotenv").config();
 
-const apiKey = "2fcfec932784cd1906365dc9238f1b18";
+const apiKey = process.env.API_KEY;
 function toCelsius(kelvin) {
   return Math.floor(kelvin - 273);
 }
