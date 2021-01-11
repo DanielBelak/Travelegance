@@ -1,0 +1,230 @@
+main {
+  padding-top: 12em;
+}
+
+.subpage-title {
+  margin-bottom: 4em;
+}
+
+.subpage-title h2 {
+  font-size: 3.5rem;
+}
+
+.subpage-title p {
+  color: goldenrod;
+  font-size: 2.2rem;
+  margin-top: 0.5em;
+}
+
+.vote-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.block {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.card-container {
+  max-width: 25%;
+}
+
+.votes-number {
+  text-align: center;
+  margin-top: 2em;
+  font-size: 2.5rem;
+}
+
+.vote-card {
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  position: relative;
+  background-color: #2f2f2f;
+  -webkit-box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.65);
+          box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.65);
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
+}
+
+.vote-card img {
+  opacity: 0.7;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+.vote-card:hover {
+  -webkit-box-shadow: 30px 30px 25px rgba(0, 0, 0, 0.5);
+          box-shadow: 30px 30px 25px rgba(0, 0, 0, 0.5);
+}
+
+.vote-card:hover > img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
+  opacity: 1;
+}
+
+.vote-card::before, .vote-card::after {
+  cursor: pointer;
+  content: "";
+  position: absolute;
+  top: 2.25em;
+  bottom: 2.25em;
+  left: 1.25em;
+  right: 1.25em;
+  opacity: 1;
+  -webkit-transition: -webkit-transform ease-out 300ms;
+  transition: -webkit-transform ease-out 300ms;
+  transition: transform ease-out 300ms;
+  transition: transform ease-out 300ms, -webkit-transform ease-out 300ms;
+}
+
+.vote-card::after {
+  border: 1px solid white;
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+}
+
+.vote-card:hover::after {
+  -webkit-transform: scale(1, 1.05);
+          transform: scale(1, 1.05);
+}
+
+.card-title {
+  font-size: 5rem;
+  font-family: "Caveat Brush", cursive;
+  letter-spacing: 8px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.insert-contact {
+  text-align: center;
+  margin-top: 5em;
+  font-size: 2rem;
+}
+
+.contest-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3em;
+  font-family: "Poppins", sans-serif;
+}
+
+.contest-form form {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contest-form .email-form {
+  width: 60%;
+  position: relative;
+  overflow: hidden;
+}
+
+.contest-form .email-form input {
+  width: 100%;
+  height: 100%;
+  color: #2f2f2f;
+  font-size: 2rem;
+  padding-top: 2em;
+  border: none;
+  position: relative;
+  outline: none;
+}
+
+.contest-form .email-form input:focus + .label-email .content-email,
+.contest-form .email-form input:valid + .label-email .content-email {
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
+  font-size: 1.4rem;
+  color: goldenrod;
+}
+
+.contest-form .email-form input:focus + .label-email::after,
+.contest-form .email-form input:valid + .label-email::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.contest-form .email-form label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  pointer-events: none;
+  height: 100%;
+  border-bottom: 1px solid #000;
+}
+
+.contest-form .email-form label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid goldenrod;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.contest-form .content-email {
+  position: absolute;
+  font-size: 2.2rem;
+  bottom: 5px;
+  left: 0px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.submit-btn {
+  width: 20%;
+  margin-left: 2em;
+  background-color: #fff;
+  padding: 0.5em 1em;
+  font-size: 1.6rem;
+  border: 2px solid #000;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+}
+
+.submit-btn:hover, .submit-btn:focus {
+  background-color: goldenrod;
+  color: white;
+}
+/*# sourceMappingURL=contest.css.map */

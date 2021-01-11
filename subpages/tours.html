@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tours</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="icon" type="image/ico" sizes="32x32" href="../img/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Poppins&family=Sriracha&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="subpage">
+      <div class="container">
+        <nav class="main-nav">
+          <div class="logo">
+            <a href="../index.html">
+              <i class="fas fa-globe-americas"></i>Trav<span>elegance</span></a
+            >
+          </div>
+
+          <ul class="main-nav-list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./tours.html">Tours</a></li>
+            <li><a href="../subpages/contest.html">Contest</a></li>
+            <li><a href="../subpages/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="subpage-title offer-title">
+          <h2>Choose from our rich offer :</h2>
+        </div>
+        <div class="filter-wrapper">
+          <div class="filter">
+            <select name="filter" class="filter-select">
+              <option value="All" selected>All</option>
+              <option value="Africa">Africa</option>
+              <option value="Asia">Asia</option>
+              <option value="Europe">Europe</option>
+              <option value="North America">North America</option>
+              <option value="South America">South America</option>
+              <option value="Australia">Australia</option>
+              <option value="Sales">Sales</option>
+            </select>
+            <span class="custom-arrow"
+              ><i class="fas fa-caret-down arrow-down"></i
+            ></span>
+          </div>
+          <div class="wishlist">
+            <ul>
+              <li class="wishlist-title">
+                <span class="wishlist-length"></span> Your wishlist &nbsp
+                <i class="fas fa-hand-point-down hand"></i>
+              </li>
+              <ul class="wishlist-items"></ul>
+            </ul>
+          </div>
+        </div>
+
+        <div class="generator">
+          <p>Can't decide? Try our random tour generator</p>
+          <button class="try-btn">Try now</button>
+        </div>
+
+        <div class="window">
+          <div class="pop-up" id="pop-up">
+            <div class="pop-up-header">
+              <h3>We have chosen for you:</h3>
+              <button class="close-x close">&times;</button>
+            </div>
+            <div class="pop-up-body"></div>
+          </div>
+          <div class="overlay close"></div>
+        </div>
+
+        <section class="gallery-tours">
+          <div class="card" data-d="North America">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/cuba.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>North America</h4>
+                  <h3>Cuba</h3>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="Africa" data-s="Sale">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/egypt.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>Africa</h4>
+                  <h3>Egypt</h3>
+                </div>
+                <div class="discount">
+                  <p>SALE&nbsp%</p>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="Europe">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/london.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>Europe</h4>
+                  <h3>Great Britain</h3>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="Asia">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/japan.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>Asia</h4>
+                  <h3>Japan</h3>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="South America" data-s="Sale">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/amazonia.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>South America</h4>
+                  <h3>Amazonia</h3>
+                </div>
+                <div class="discount">
+                  <p>SALE&nbsp%</p>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="Australia">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/sydney.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>Australia</h4>
+                  <h3>Sydney</h3>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="North America">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/usa.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>North America</h4>
+                  <h3>U.S.A.</h3>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="Africa" data-s="Sale">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/kenya.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>Africa</h4>
+                  <h3>Kenya</h3>
+                </div>
+                <div class="discount">
+                  <p>SALE&nbsp%</p>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="Europe">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/paris.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>Europe</h4>
+                  <h3>France</h3>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="Asia">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/china.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>Asia</h4>
+                  <h3>China</h3>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="South America">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/machu picchu.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>South America</h4>
+                  <h3>Machu Picchu</h3>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="Australia">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/surf.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>Australia</h4>
+                  <h3>Surf camp</h3>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="North America">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/canada.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>North America</h4>
+                  <h3>Canada</h3>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="Africa" data-s="Sale">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/cape-town.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>Africa</h4>
+                  <h3>Cape town</h3>
+                </div>
+                <div class="discount">
+                  <p>SALE&nbsp%</p>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="Europe">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/iceland.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>Europe</h4>
+                  <h3>Iceland</h3>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="Asia">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/thailand.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>Asia</h4>
+                  <h3>Thailand</h3>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="South America">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/patagonia.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>South America</h4>
+                  <h3>Patagonia</h3>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="Australia" data-s="Sale">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/new zealand.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>Australia</h4>
+                  <h3>New Zealand</h3>
+                </div>
+                <div class="discount">
+                  <p>SALE&nbsp%</p>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="North America" data-s="Sale">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/mexico.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>North America</h4>
+                  <h3>Mexico</h3>
+                </div>
+                <div class="discount">
+                  <p>SALE&nbsp%</p>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="Africa">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/madagascar.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>Africa</h4>
+                  <h3>Madagascar</h3>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="Europe">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/rome.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>Europe</h4>
+                  <h3>Rome</h3>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="Asia">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/india.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>Asia</h4>
+                  <h3>India</h3>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="South America" data-s="Sale">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/tango.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>South America</h4>
+                  <h3>Argentina</h3>
+                </div>
+                <div class="discount">
+                  <p>SALE&nbsp%</p>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="Australia">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/tasmania.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>Australia</h4>
+                  <h3>Tasmania</h3>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="North America" data-s="Sale">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/caribbean.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>North America</h4>
+                  <h3>Caribbean</h3>
+                </div>
+                <div class="discount">
+                  <p>SALE&nbsp%</p>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="Africa">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/morocco.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>Africa</h4>
+                  <h3>Morocco</h3>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="Europe">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/greece.jpg" alt="" />
+                </div>
+                <div class="unit-title">
+                  <h4>Europe</h4>
+                  <h3>Greece</h3>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="Asia">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/bhutan.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>Asia</h4>
+                  <h3>Bhutan</h3>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="South America">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/rio de janeiro.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>South America</h4>
+                  <h3>Rio de Janeiro</h3>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-d="Australia" data-s="Sale">
+            <div class="card-wrapper">
+              <div class="card-front">
+                <div class="gradient-overlay">
+                  <img src="../img/tours/12 apostles.jpg" />
+                </div>
+                <div class="unit-title">
+                  <h4>Australia</h4>
+                  <h3>Cliffs</h3>
+                </div>
+                <div class="discount">
+                  <p>SALE&nbsp%</p>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="back-face">
+                  <div>
+                    <h4 class="heart">Add to wishlist</h4>
+                    <i class="fas fa-heart symbol"></i>
+                  </div>
+                  <div>
+                    <h4>More info</h4>
+                    <i class="fas fa-info symbol"></i>
+                  </div>
+                  <div>
+                    <h4>Add to basket</h4>
+                    <i class="fas fa-shopping-basket symbol"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-wrap">
+          <div class="logo-footer logo">
+            <a href="../index.html">
+              <i class="fas fa-globe-americas"></i>Trav<span>elegance</span></a
+            >
+          </div>
+          <div class="social">
+            <ul>
+              <li>
+                <div class="logo-wrapper">
+                  <a href="https://www.facebook.com">
+                    <i class="fab fa-facebook-f icon"></i
+                  ></a>
+                </div>
+              </li>
+              <li>
+                <div class="logo-wrapper">
+                  <a href="https://www.twitter.com"
+                    ><i class="fab fa-twitter icon"></i
+                  ></a>
+                </div>
+              </li>
+              <li>
+                <div class="logo-wrapper">
+                  <a href="https://www.instagram.com"
+                    ><i class="fab fa-instagram icon"></i
+                  ></a>
+                </div>
+              </li>
+              <li>
+                <div class="logo-wrapper">
+                  <a href="https://www.youtube.com"
+                    ><i class="fab fa-youtube icon"></i
+                  ></a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-list">
+            <ul>
+              <li><h4>About us</h4></li>
+              <li>Team</li>
+              <li>Why us</li>
+              <li>Certificates</li>
+              <li>References</li>
+              <li>History</li>
+            </ul>
+            <ul>
+              <li><h4>Offer</h4></li>
+              <li>Catalogue</li>
+              <li>Sales</li>
+              <li>Blog</li>
+              <li>For groups</li>
+              <li>Lectures</li>
+            </ul>
+            <ul>
+              <li><h4>Discover</h4></li>
+              <li>Coulture</li>
+              <li>Food</li>
+              <li>Festivals</li>
+              <li>Sport events</li>
+              <li>Volunteering</li>
+            </ul>
+            <ul>
+              <li><h4>Info</h4></li>
+              <li>GDPR</li>
+              <li>Policy</li>
+              <li>Terms and conditions</li>
+              <li>FAQ</li>
+              <li>Insurance</li>
+            </ul>
+          </div>
+          <div class="copyright">
+            &copy;2020 TRAVELEGANCE, All rights reserved, Created by DevDenzel
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"
+      integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="../javascript/tours.js"></script>
+  </body>
+</html>

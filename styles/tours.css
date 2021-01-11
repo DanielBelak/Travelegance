@@ -1,0 +1,404 @@
+.offer-title {
+  margin-bottom: 0;
+}
+
+.filter-select {
+  width: 100%;
+  color: black;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 0;
+  padding: 1em;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  border: 0;
+  -webkit-animation: 0.4s ease;
+          animation: 0.4s ease;
+  cursor: pointer;
+}
+
+.filter-select option {
+  font-size: 2rem;
+}
+
+.filter-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filter {
+  margin-top: 1em;
+  width: 20em;
+  position: relative;
+  border: 3px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.custom-arrow {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 3em;
+  pointer-events: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 0.5em;
+}
+
+.arrow-down {
+  font-size: 3rem;
+  color: black;
+}
+
+.generator,
+.wishlist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2em 0;
+}
+
+.generator p,
+.wishlist p {
+  color: goldenrod;
+  font-size: 2.3rem;
+}
+
+.try-btn {
+  margin-left: 2em;
+  background-color: #fff;
+  padding: 0.5em 2em;
+  font-size: 1.6rem;
+  border: 2px solid #000;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.try-btn:hover, .try-btn:focus {
+  background-color: goldenrod;
+  color: white;
+}
+
+.pop-up {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  -webkit-transition: 400ms ease-in-out;
+  transition: 400ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 999;
+  background-color: #fff;
+  width: 500px;
+  max-width: 80%;
+  padding: 3em;
+}
+
+.pop-up.active {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.pop-up-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2em;
+}
+
+.pop-up-header h3 {
+  font-size: 2.5rem;
+}
+
+.close-x {
+  font-size: 3.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: white;
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  top: 0.5em;
+  right: 0.5em;
+  z-index: 1000;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 998;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  visibility: hidden;
+  -webkit-transition: 400ms ease-in-out;
+  transition: 400ms ease-in-out;
+}
+
+.overlay.active {
+  visibility: visible;
+  pointer-events: all;
+}
+
+.pop-up-body {
+  margin: 0 auto;
+  width: 70%;
+  position: relative;
+}
+
+.wishlist-length {
+  background-color: goldenrod;
+  border-radius: 50%;
+  padding: 0 0.4em;
+  color: white;
+  display: none;
+}
+
+.wishlist ul {
+  list-style-type: none;
+  font-size: 2.8rem;
+  position: relative;
+  padding: 0 2em;
+}
+
+.wishlist ul:hover {
+  text-decoration: underline;
+}
+
+.wishlist-title,
+.x-btn {
+  cursor: pointer;
+}
+
+.wishlist-items {
+  display: none;
+}
+
+.wishlist-active {
+  position: absolute !important;
+  width: 100%;
+  display: block;
+  background-color: #2f2f2f;
+  z-index: 9999;
+  -webkit-transition: 2.5s ease;
+  transition: 2.5s ease;
+}
+
+.wishlist-active li {
+  color: goldenrod;
+  font-size: 1.8rem;
+  padding: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gallery-tours {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card {
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  margin: 4rem;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.card-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.card-front {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: 1 / 1;
+  border: 5px solid #2f2f2f;
+  -webkit-box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-back {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: 1 / 1;
+  -webkit-transform: rotateY(180deg) translateZ(1px);
+          transform: rotateY(180deg) translateZ(1px);
+  background-color: white;
+  border: 5px solid #2f2f2f;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.back-face {
+  height: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.back-face h4 {
+  font-size: 2rem;
+}
+
+.back-face .symbol {
+  margin-top: 0.5em;
+  font-size: 3rem;
+  color: goldenrod;
+}
+
+.heart {
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+.heart:hover {
+  text-decoration: underline;
+}
+
+.card-wrapper img {
+  width: 25rem;
+}
+
+.card:hover .card-wrapper {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover .card-front {
+  -webkit-box-shadow: 0 0 0 #fff;
+          box-shadow: 0 0 0 #fff;
+}
+
+.unit-title {
+  display: block;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  color: white;
+}
+
+.unit-title h4 {
+  font-size: 1.8rem;
+}
+
+.unit-title h3 {
+  font-size: 2.7rem;
+}
+
+.discount {
+  padding: 1em 2.2em;
+  border-radius: 100px;
+  background-color: goldenrod;
+  width: 25%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 1em;
+  right: 1em;
+}
+
+.gradient-overlay {
+  position: relative;
+}
+
+.gradient-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, rgba(252, 252, 252, 0)), to(#252424));
+  background: linear-gradient(180deg, rgba(252, 252, 252, 0) 70%, #252424 100%);
+}
+
+.card-active {
+  display: block;
+}
+
+.card-inactive {
+  display: none;
+}
+/*# sourceMappingURL=tours.css.map */
