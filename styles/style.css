@@ -408,7 +408,7 @@ main {
   font-size: 3rem;
 }
 
-.map {
+.contact-map {
   width: 100%;
   height: 50vh;
 }
@@ -854,6 +854,7 @@ img {
 .intro {
   text-align: center;
   display: none;
+  overflow-y: hidden;
 }
 
 @-webkit-keyframes fadeout {
@@ -1089,7 +1090,7 @@ header {
   margin-left: 0.4em;
   font-weight: normal;
   color: goldenrod;
-  letter-spacing: 6px;
+  letter-spacing: 4px;
 }
 
 .typing-bar {
@@ -1415,8 +1416,8 @@ header {
   background-color: #ac1b1b;
 }
 
-.pop-up {
-  position: relative;
+.pop-up-quiz {
+  position: fixed;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%) scale(0);
@@ -1425,9 +1426,14 @@ header {
   transition: 400ms ease-in-out;
   z-index: 999;
   width: 25vw;
+  height: 7em;
   max-width: 80%;
-  height: 15vh;
-  padding: 0;
+}
+
+.instructions {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1em;
 }
 
 .scratch {
@@ -1439,7 +1445,7 @@ header {
   overflow: hidden;
 }
 
-.pop-up.active {
+.pop-up-quiz.active {
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
 }

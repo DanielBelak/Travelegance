@@ -2,8 +2,10 @@
 const welcomeVideo = document.querySelector(".intro");
 const mainPage = document.querySelector(".main-page");
 const continueBtn = document.querySelector(".continue-link");
+const body = document.querySelector("body");
 if (!document.cookie) {
   welcomeVideo.style.display = "block";
+  body.style.overflowY = "hidden";
   document.cookie = "visited";
 } else {
   mainPage.style.visibility = "visible";
@@ -11,6 +13,7 @@ if (!document.cookie) {
 
 continueBtn.addEventListener("click", () => {
   welcomeVideo.classList.add("fadeout");
+  body.style.overflowY = "scroll";
 });
 welcomeVideo.addEventListener("animationend", () => {
   welcomeVideo.style.display = "none";
@@ -96,7 +99,7 @@ const rewardButton = document.querySelector(".reward");
 const nextButton = document.querySelector(".next");
 const overlay = document.querySelector(".overlay");
 const scratch = document.querySelector(".scratch");
-const popUp = document.querySelector(".pop-up");
+const popUp = document.querySelector(".pop-up-quiz");
 
 rewardButton.addEventListener("click", () => {
   overlay.classList.add("active");
@@ -205,9 +208,11 @@ options.addEventListener("click", (e) => {
     e.target.classList.add("correct");
     rewardButton.style.display = "block";
   } else {
-    e.target.classList.add("incorrect");
-    nextButton.style.display = "block";
-    options.style.pointerEvents = "none";
+    if (e.target.classList.contains("option")) {
+      e.target.classList.add("incorrect");
+      nextButton.style.display = "block";
+      options.style.pointerEvents = "none";
+    }
   }
 });
 
@@ -218,10 +223,6 @@ nextButton.addEventListener("click", () => {
   generateQuestion();
   generateAnswers();
 });
-//reply.addEventListener("click",checkAnswer());
-// reply.addEventListener("click",(e)=>{
-//  console.log(e.target)
-//})
 
 generateQuestion();
 generateAnswers();
@@ -241,28 +242,35 @@ if (closeButton) {
     button.addEventListener("click", () => {
       overlay.classList.remove("active");
       popUp.style.display = "none";
+      rewardButton.style.pointerEvents = "none";
+      options.style.pointerEvents = "none";
     });
   });
 }
 //MAP//
-const continents = document.querySelector("#continents");
-let clickTarget = null;
+fetch("./subpages/map.html")
+  .then((response) => {
+    return response.text();
+  })
+  .then((data) => {
+    document.querySelector(".map").innerHTML = data;
+    let continents = document.querySelector("#continents");
+    let clickTarget = null;
 
-continents.addEventListener("click", function (e) {
-  let clickTarget = e.target.parentElement.dataset.d;
-  console.log(clickTarget);
-  localStorage.setItem("continent", clickTarget);
-  window.location.href = "./subpages/tours.html";
-});
+    continents.addEventListener("click", function (e) {
+      let clickTarget = e.target.parentElement.dataset.d;
+      localStorage.setItem("continent", clickTarget);
+      window.location.href = "./subpages/tours.html";
+    });
+  });
 
 //WEATHER//
+
 let london = 2643743;
 let sydney = 6619279;
 let newYork = 5128581;
 let tokyo = 1850147;
-require("dotenv").config();
-
-const apiKey = process.env.API_KEY;
+const apiKey = config.API_KEY;
 function toCelsius(kelvin) {
   return Math.floor(kelvin - 273);
 }
