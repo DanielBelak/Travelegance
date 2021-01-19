@@ -101,7 +101,7 @@ main {
 }
 
 .card-title {
-  font-size: 5rem;
+  font-size: 3vw;
   font-family: "Caveat Brush", cursive;
   letter-spacing: 8px;
   color: white;
@@ -120,6 +120,7 @@ main {
 }
 
 .contest-form {
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,28 +132,17 @@ main {
           align-items: center;
   margin-top: 3em;
   font-family: "Poppins", sans-serif;
-}
-
-.contest-form form {
   width: 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-.contest-form .email-form {
+.email-form {
   width: 60%;
+  min-width: 15em;
   position: relative;
   overflow: hidden;
 }
 
-.contest-form .email-form input {
+.email-form input {
   width: 100%;
   height: 100%;
   color: #2f2f2f;
@@ -163,21 +153,21 @@ main {
   outline: none;
 }
 
-.contest-form .email-form input:focus + .label-email .content-email,
-.contest-form .email-form input:valid + .label-email .content-email {
+.email-form input:focus + .label-email .content-email,
+.email-form input:valid + .label-email .content-email {
   -webkit-transform: translateY(-150%);
           transform: translateY(-150%);
   font-size: 1.4rem;
   color: goldenrod;
 }
 
-.contest-form .email-form input:focus + .label-email::after,
-.contest-form .email-form input:valid + .label-email::after {
+.email-form input:focus + .label-email::after,
+.email-form input:valid + .label-email::after {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
 }
 
-.contest-form .email-form label {
+.email-form label {
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -187,7 +177,7 @@ main {
   border-bottom: 1px solid #000;
 }
 
-.contest-form .email-form label::after {
+.email-form label::after {
   content: "";
   position: absolute;
   left: 0px;
@@ -203,7 +193,7 @@ main {
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
-.contest-form .content-email {
+.content-email {
   position: absolute;
   font-size: 2.2rem;
   bottom: 5px;
@@ -213,10 +203,9 @@ main {
 }
 
 .submit-btn {
-  width: 20%;
   margin-left: 2em;
   background-color: #fff;
-  padding: 0.5em 1em;
+  padding: 0.5em 2em;
   font-size: 1.6rem;
   border: 2px solid #000;
   font-family: "Poppins", sans-serif;
@@ -226,5 +215,60 @@ main {
 .submit-btn:hover, .submit-btn:focus {
   background-color: goldenrod;
   color: white;
+}
+
+@media (max-width: 1300px) {
+  .card-title {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .card-title {
+    font-size: 3rem;
+    letter-spacing: 4px;
+  }
+}
+
+@media (max-width: 750px) {
+  .subpage-title h2 {
+    font-size: 2.5rem;
+  }
+  .subpage-title p {
+    font-size: 1.8rem;
+  }
+  .vote-cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card-container {
+    min-width: 60%;
+  }
+  .card-title {
+    font-size: 8vw;
+    letter-spacing: 4px;
+  }
+  .contest-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .submit-btn {
+    margin-top: 2em;
+    margin-left: 0;
+  }
+  .votes-number {
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+  .content-email {
+    font-size: 1.8rem;
+  }
+  .insert-contact {
+    margin-top: 0;
+  }
 }
 /*# sourceMappingURL=contest.css.map */

@@ -1,3 +1,11 @@
+//BURGER//
+const burger = document.querySelector(".burger");
+const navbar = document.querySelector(".main-nav-list");
+
+burger.addEventListener("click", () => {
+  navbar.classList.toggle("flex");
+  navbar.classList.toggle("navbar-active");
+});
 //POP-UP WINDOW//
 {
   const openButton = document.querySelector(".try-btn");
@@ -75,7 +83,6 @@ if (localStorage.getItem("wishlist") === null) {
   wishlist = [];
 } else {
   wishlist = JSON.parse(localStorage.getItem("wishlist"));
-  console.log(wishlist);
   wishlist.forEach((destination) => {
     createItem(destination);
     eraseItem();

@@ -1,3 +1,11 @@
+//BURGER//
+const burger = document.querySelector(".burger");
+const navbar = document.querySelector(".main-nav-list");
+
+burger.addEventListener("click", () => {
+  navbar.classList.toggle("flex");
+  navbar.classList.toggle("navbar-active");
+});
 //VOTE//
 const options = document.querySelectorAll(".vote-card");
 const votes = document.querySelectorAll(".number");
@@ -12,7 +20,6 @@ let score = {
 };
 if (localStorage.getItem("score")) {
   score = JSON.parse(localStorage.getItem("score"));
-  console.log(score);
   beachScore.innerHTML = score.beach;
   cityScore.innerHTML = score.city;
   mountainScore.innerHTML = score.mountain;

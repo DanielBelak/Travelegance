@@ -18,11 +18,11 @@
 }
 .filter-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
 .filter {
-  margin-top: 1em;
   width: 20em;
   position: relative;
   border: 3px solid black;
@@ -58,6 +58,9 @@
     color: goldenrod;
     font-size: 2.3rem;
   }
+}
+.wishlist {
+  flex-shrink: 0;
 }
 .try-btn {
   margin-left: 2em;
@@ -148,7 +151,6 @@
   list-style-type: none;
   font-size: 2.8rem;
   position: relative;
-  padding: 0 2em;
   &:hover {
     text-decoration: underline;
   }
@@ -295,4 +297,59 @@
 }
 .card-inactive {
   display: none;
+}
+@media (max-width: 1000px) {
+  .generator {
+    flex-direction: column;
+    text-align: center;
+  }
+  .try-btn {
+    margin-top: 2em;
+    margin-left: 0;
+  }
+  .filter {
+    width: 15em;
+  }
+}
+@media (max-width: 750px) {
+  .filter {
+    width: 10em;
+  }
+  .filter-select {
+    padding: 0.5em;
+  }
+  .wishlist ul {
+    font-size: 2.2rem;
+  }
+  .pop-up.active {
+    padding: 2em;
+  }
+}
+@media (max-width: 500px) {
+  .filter-wrapper {
+    flex-direction: column;
+    margin-top: 3em;
+  }
+  .wishlist-title {
+    margin-top: 1em;
+  }
+  .filter {
+    width: 15em;
+  }
+  .pop-up-header {
+    h3 {
+      font-size: 2rem;
+    }
+  }
+  .unit-title {
+    h4 {
+      font-size: 1.4rem;
+    }
+    h3 {
+      font-size: 2.2rem;
+    }
+  }
+  .pop-up-body {
+    width: 100%;
+  }
 }

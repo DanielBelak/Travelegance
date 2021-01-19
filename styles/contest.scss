@@ -72,7 +72,7 @@ main {
 }
 
 .card-title {
-  font-size: 5rem;
+  font-size: 3vw;
   font-family: "Caveat Brush", cursive;
   letter-spacing: 8px;
   color: white;
@@ -89,76 +89,74 @@ main {
 }
 //FORMULAR//
 .contest-form {
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 3em;
   font-family: "Poppins", sans-serif;
-  form {
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .email-form {
-    width: 60%;
-    position: relative;
-    overflow: hidden;
-  }
+  width: 40%;
+}
 
-  .email-form input {
-    width: 100%;
-    height: 100%;
-    color: #2f2f2f;
-    font-size: 2rem;
-    padding-top: 2em;
-    border: none;
-    position: relative;
-    outline: none;
-    &:focus + .label-email .content-email,
-    &:valid + .label-email .content-email {
-      transform: translateY(-150%);
-      font-size: 1.4rem;
-      color: goldenrod;
-    }
-    &:focus + .label-email::after,
-    &:valid + .label-email::after {
-      transform: translateX(0%);
-    }
+.email-form {
+  width: 60%;
+  min-width: 15em;
+  position: relative;
+  overflow: hidden;
+}
+
+.email-form input {
+  width: 100%;
+  height: 100%;
+  color: #2f2f2f;
+  font-size: 2rem;
+  padding-top: 2em;
+  border: none;
+  position: relative;
+  outline: none;
+  &:focus + .label-email .content-email,
+  &:valid + .label-email .content-email {
+    transform: translateY(-150%);
+    font-size: 1.4rem;
+    color: goldenrod;
   }
-  .email-form label {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    pointer-events: none;
-    height: 100%;
-    border-bottom: 1px solid #000;
-  }
-  .email-form label::after {
-    content: "";
-    position: absolute;
-    left: 0px;
-    bottom: -1px;
-    height: 100%;
-    width: 100%;
-    border-bottom: 3px solid goldenrod;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-  }
-  .content-email {
-    position: absolute;
-    font-size: 2.2rem;
-    bottom: 5px;
-    left: 0px;
-    transition: all 0.3s ease;
+  &:focus + .label-email::after,
+  &:valid + .label-email::after {
+    transform: translateX(0%);
   }
 }
+.email-form label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  pointer-events: none;
+  height: 100%;
+  border-bottom: 1px solid #000;
+}
+.email-form label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid goldenrod;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+.content-email {
+  position: absolute;
+  font-size: 2.2rem;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+
 .submit-btn {
-  width: 20%;
   margin-left: 2em;
   background-color: #fff;
-  padding: 0.5em 1em;
+  padding: 0.5em 2em;
   font-size: 1.6rem;
   border: 2px solid #000;
   font-family: "Poppins", sans-serif;
@@ -167,5 +165,53 @@ main {
   &:focus {
     background-color: goldenrod;
     color: white;
+  }
+}
+@media (max-width: 1300px) {
+  .card-title {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 1100px) {
+  .card-title {
+    font-size: 3rem;
+    letter-spacing: 4px;
+  }
+}
+@media (max-width: 750px) {
+  .subpage-title {
+    h2 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1.8rem;
+    }
+  }
+  .vote-cards {
+    flex-direction: column;
+  }
+  .card-container {
+    min-width: 60%;
+  }
+  .card-title {
+    font-size: 8vw;
+    letter-spacing: 4px;
+  }
+  .contest-form {
+    flex-direction: column;
+  }
+  .submit-btn {
+    margin-top: 2em;
+    margin-left: 0;
+  }
+  .votes-number {
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+  .content-email {
+    font-size: 1.8rem;
+  }
+  .insert-contact {
+    margin-top: 0;
   }
 }

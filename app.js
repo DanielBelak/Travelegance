@@ -23,7 +23,7 @@ welcomeVideo.addEventListener("animationend", () => {
 
 //NAVBAR SCROLL//
 const header = document.querySelector("header");
-
+const navbar = document.querySelector(".main-nav-list");
 const observer = new IntersectionObserver(function (entries, observer) {
   entries.forEach((entry) => {});
 });
@@ -34,54 +34,46 @@ window.addEventListener("scroll", function () {
   let header = document.querySelector("header");
   let scrollPosition = window.scrollY > 20;
   header.classList.toggle("header-active", scrollPosition);
+  navbar.classList.toggle("navbar-active", scrollPosition);
 });
+//BURGER MENU//
+const burger = document.querySelector(".burger");
 
+burger.addEventListener("click", () => {
+  navbar.classList.toggle("flex");
+});
 //TYPING EFFECT//
 
-//typing
-const typedTextSpan = document.querySelector(".typing");
-const cursorSpan = document.querySelector(".typing-bar");
-const textArray = ["view", "life", "adventure", "story"];
-const typingDelay = 200;
-const erasingDelay = 100;
-const newTextDelay = 2000; // Delay between current and next text
-let textArrayIndex = 0;
-let charIndex = 0;
+const typingText = document.querySelector(".typing");
+const word = ["view", "life", "story"];
+const letterDelay = 100;
+const wordDelay = 2000;
+let wordIndex = 0;
+let letterIndex = 0;
 
 function type() {
-  if (charIndex < textArray[textArrayIndex].length) {
-    if (!cursorSpan.classList.contains("typing"))
-      cursorSpan.classList.add("typing");
-    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-    charIndex++;
-    setTimeout(type, typingDelay);
+  if (letterIndex < word[wordIndex].length) {
+    typingText.textContent += word[wordIndex].charAt(letterIndex);
+    letterIndex++;
+    setTimeout(type, letterDelay);
   } else {
-    cursorSpan.classList.remove("typing");
-    setTimeout(erase, newTextDelay);
+    setTimeout(erase, wordDelay);
   }
 }
-
 function erase() {
-  if (charIndex > 0) {
-    if (!cursorSpan.classList.contains("typing"))
-      cursorSpan.classList.add("typing");
-    typedTextSpan.textContent = textArray[textArrayIndex].substring(
-      0,
-      charIndex - 1
-    );
-    charIndex--;
-    setTimeout(erase, erasingDelay);
+  if (letterIndex > 0) {
+    typingText.textContent = word[wordIndex].substring(0, letterIndex - 1);
+    letterIndex--;
+    setTimeout(erase, letterDelay);
   } else {
-    cursorSpan.classList.remove("typing");
-    textArrayIndex++;
-    if (textArrayIndex >= textArray.length) textArrayIndex = 0;
-    setTimeout(type, typingDelay + 1100);
+    wordIndex++;
+    if (wordIndex >= word.length) wordIndex = 0;
+    setTimeout(type, letterDelay + 1000);
   }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  // On DOM Load initiate the effect
-  if (textArray.length) setTimeout(type, newTextDelay);
+  if (word.length) setTimeout(type, wordDelay);
 });
 
 //CAROUSEL//

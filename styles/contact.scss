@@ -1,10 +1,17 @@
+.contact-title {
+  margin-bottom: 2em;
+  font-size: 3.5rem;
+}
+
 .contact-wrapper {
   display: flex;
+  //flex-wrap: wrap;
   justify-content: space-between;
 }
 .address-wrapper,
 .message-wrapper {
-  width: 47.5%;
+  width: 48%;
+  min-width: 625px;
   padding: 2em 3em;
 }
 .address-wrapper {
@@ -52,6 +59,7 @@
 }
 .message-wrapper {
   margin-bottom: 4em;
+  margin-left: 2em;
   border: 2px goldenrod solid;
   border-radius: 20px;
   h3 {
@@ -131,4 +139,78 @@
 .contact-map {
   width: 100%;
   height: 50vh;
+}
+//MEDIA QUERIES//
+@media (max-width: 1600px) {
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .message-wrapper {
+    margin-left: 0;
+  }
+  .address-wrapper,
+  .message-wrapper {
+    width: 70%;
+  }
+}
+@media (max-width: 700px) {
+  .address-wrapper {
+    flex-direction: column;
+  }
+
+  .full-name {
+    flex-direction: column;
+  }
+  .address-wrapper,
+  .message-wrapper {
+    width: 100%;
+    min-width: 0px;
+  }
+  .right,
+  .left {
+    width: 80%;
+  }
+  .form {
+    width: 50%;
+    min-width: 220px;
+  }
+}
+@media (max-width: 500px) {
+  .right,
+  .left {
+    width: 100%;
+  }
+  .address-wrapper,
+  .message-wrapper {
+    padding: 2em;
+  }
+  .form {
+    width: 100%;
+    min-width: 0px;
+  }
+  main {
+    padding-top: 8em;
+  }
+  .contact-title {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 380px) {
+  .address-wrapper {
+    font-size: 1rem;
+  }
+  .content-name,
+  #textarea {
+    font-size: 1.2rem;
+  }
+  .contact-title {
+    font-size: 2rem;
+  }
+  main {
+    padding-top: 8em;
+  }
+  .message-wrapper h3 {
+    font-size: 1.5rem;
+  }
 }

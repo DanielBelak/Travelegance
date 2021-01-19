@@ -26,6 +26,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -35,7 +37,6 @@
 }
 
 .filter {
-  margin-top: 1em;
   width: 20em;
   position: relative;
   border: 3px solid black;
@@ -86,6 +87,11 @@
 .wishlist p {
   color: goldenrod;
   font-size: 2.3rem;
+}
+
+.wishlist {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .try-btn {
@@ -195,7 +201,6 @@
   list-style-type: none;
   font-size: 2.8rem;
   position: relative;
-  padding: 0 2em;
 }
 
 .wishlist ul:hover {
@@ -400,5 +405,65 @@
 
 .card-inactive {
   display: none;
+}
+
+@media (max-width: 1000px) {
+  .generator {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .try-btn {
+    margin-top: 2em;
+    margin-left: 0;
+  }
+  .filter {
+    width: 15em;
+  }
+}
+
+@media (max-width: 750px) {
+  .filter {
+    width: 10em;
+  }
+  .filter-select {
+    padding: 0.5em;
+  }
+  .wishlist ul {
+    font-size: 2.2rem;
+  }
+  .pop-up.active {
+    padding: 2em;
+  }
+}
+
+@media (max-width: 500px) {
+  .filter-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 3em;
+  }
+  .wishlist-title {
+    margin-top: 1em;
+  }
+  .filter {
+    width: 15em;
+  }
+  .pop-up-header h3 {
+    font-size: 2rem;
+  }
+  .unit-title h4 {
+    font-size: 1.4rem;
+  }
+  .unit-title h3 {
+    font-size: 2.2rem;
+  }
+  .pop-up-body {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=tours.css.map */
